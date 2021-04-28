@@ -3,8 +3,8 @@ package org.iesgrancapitan.PROGR.openjfx;
 /**
  * Ejemplo de GUI usando JavaFX.
  * 
- * Mostramos una ventana con título a pantalla completa, tiene que tener un objeto Scene para ello.
- * 
+ * Mostramos una ventana con título a pantalla completa.
+ *
  */
 
 import javafx.application.Application;
