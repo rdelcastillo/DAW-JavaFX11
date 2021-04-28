@@ -33,10 +33,10 @@ public class Ej01HolaMundo extends Application {
 
   private void muestraMensajeInit() {
     Scanner s = new Scanner(System.in);
-    System.out.println("Soy el método init() y si aparezco (no soy obligatorio), "
-        + "soy llamado el primero y antes de que la interfaz gráfica se inicie.");
-    System.out.println("Normalmente soy útil cuando es necesario inicializar "
-        + "rutinas antes del lanzamiento de la GUI.\n");
+    System.out.println("Soy el método init() y si aparezco (no soy obligatorio)");
+    System.out.println("soy llamado el primero y antes de que la interfaz gráfica se inicie.");
+    System.out.println("Normalmente soy útil cuando es necesario inicializar rutinas");
+    System.out.println("antes del lanzamiento de la GUI.\n");
     System.out.println("Pulsa Intro para continuar...");
     s.nextLine();
   }
