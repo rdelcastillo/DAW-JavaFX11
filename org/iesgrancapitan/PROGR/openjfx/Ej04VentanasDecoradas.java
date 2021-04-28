@@ -7,6 +7,8 @@ package org.iesgrancapitan.PROGR.openjfx;
  */
 
 import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -19,15 +21,23 @@ public class Ej04VentanasDecoradas extends Application {
   @Override
   public void start(Stage primaryStage) {
     primaryStage.setTitle("JavaFX App");
+    primaryStage.setScene(new Scene(new Label("Ejemplos de decoración de ventanas")));
     primaryStage.show();
     
-    // vector cpn cinco escenarios
-    Stage[] stages = {new Stage(), new Stage(), new Stage(), new Stage(), new Stage()};
+    // vector con 5 escenarios
+    Stage[] stages = new Stage[5];
+    for (int i = 0; i < stages.length; i++) {
+      stages[i] = new Stage();
+      stages[i].setX(100 * (i+1));
+      stages[i].setY(100 * (i+1));
+      Scene scene = new Scene(new Label("Soy la ventana " + (i+1)),200,50);
+      stages[i].setScene(scene);
+    }
     
     // vector con estilos de decoración de ventana
-    StageStyle[] estilos = {    StageStyle.DECORATED, StageStyle.UNDECORATED, 
-                                StageStyle.UNIFIED, StageStyle.TRANSPARENT, 
-                                StageStyle.UTILITY    };
+    StageStyle[] estilos = {StageStyle.DECORATED, StageStyle.UNDECORATED, 
+                            StageStyle.UNIFIED, StageStyle.TRANSPARENT, 
+                            StageStyle.UTILITY};
     
     // aplicamos estilo a cada escenario, ponemos título del escenario en la ventana y mostramos    
     for (int i=0; i<stages.length; i++) {
