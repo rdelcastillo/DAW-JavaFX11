@@ -3,7 +3,7 @@ package org.iesgrancapitan.PROGR.openjfx;
 /**
  * Ejemplo de GUI usando JavaFX.
  * 
- * Mostramos una ventana con título maximizada, tiene que tener un objeto Scene para ello.
+ * Mostramos una ventana con título maximizada.
  * 
  */
 
