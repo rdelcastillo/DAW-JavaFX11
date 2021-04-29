@@ -26,8 +26,12 @@ Mostramos una ventana con título maximizada.
 
 ## Ej07VentanasConEventos.java
 
-Manejamos de eventos emitidos desde un escenario.
+Manejamos eventos emitidos desde un escenario.
 
 ## Ej08CursorRaton.java
 
 Cambiamos el cursor gráfico del ratón desde una escena.
+
+## Ej09EscenasConEventos.java
+
+Manejamos eventos emitidos desde una escena.
