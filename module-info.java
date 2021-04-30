@@ -6,4 +6,5 @@ module hellofx {
   opens org.iesgrancapitan.PROGR.openjfx to javafx.fxml;
   
   exports org.iesgrancapitan.PROGR.openjfx;
+  exports org.iesgrancapitan.PROGR.openjfx.dialogos;
 }
