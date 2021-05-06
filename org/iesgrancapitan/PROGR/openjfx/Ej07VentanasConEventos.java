@@ -50,13 +50,23 @@ public class Ej07VentanasConEventos extends Application {
     
     // Manejo de eventos de ratón
     primaryStage.addEventHandler(MouseEvent.MOUSE_PRESSED, 
-        event -> System.out.println("Botón izquierdo del ratón pulsado"));
+        event -> System.out.println("Botón del ratón " + getMouseButton(event) + " pulsado"));
     primaryStage.addEventHandler(MouseEvent.MOUSE_RELEASED, 
-        event -> System.out.println("Botón izquierdo del ratón levantado"));
+        event -> System.out.println("Botón del ratón " + getMouseButton(event) + " levantado"));
     primaryStage.addEventHandler(MouseEvent.MOUSE_CLICKED, 
         event -> System.out.println("Click en [" + (int) event.getX() + "," + (int) event.getY() + "]"));
     
     primaryStage.show();
+  }
+
+  private String getMouseButton(MouseEvent event) {
+    if (event.isPrimaryButtonDown()) {
+      return "primario";
+    } else if (event.isMiddleButtonDown()) {
+      return "central";
+    } else {
+      return "secundario";
+    }
   }
 
   private Scene newScene() {
