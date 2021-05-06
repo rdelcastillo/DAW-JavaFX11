@@ -35,3 +35,7 @@ Cambiamos el cursor gráfico del ratón desde una escena.
 ## Ej09EscenasConEventos.java
 
 Manejamos eventos emitidos desde una escena.
+
+## Ej10Nodos.java
+
+Accedemos a las propiedades de los nodos de un layout.
