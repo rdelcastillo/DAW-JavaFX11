@@ -17,10 +17,10 @@ import javafx.stage.Stage;
 
 public class Ej09EscenasConEventos extends Application {
 
-  Scene scene;
-  TextArea textArea = new TextArea();
-  Text posXRaton = new Text();
-  Text posYRaton = new Text();
+  private Scene scene;
+  private TextArea textArea = new TextArea();
+  private Text posXRaton = new Text();
+  private Text posYRaton = new Text();
 
   @Override
   public void start(Stage primaryStage) {
