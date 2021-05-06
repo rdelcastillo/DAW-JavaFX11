@@ -2,6 +2,7 @@ module hellofx {
   requires transitive javafx.graphics;
   requires javafx.controls;
   requires javafx.fxml;
+  requires javafx.base;
   
   opens org.iesgrancapitan.PROGR.openjfx to javafx.fxml;
   
