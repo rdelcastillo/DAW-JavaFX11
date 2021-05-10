@@ -39,3 +39,11 @@ Manejamos eventos emitidos desde una escena.
 ## Ej10Nodos.java
 
 Accedemos a las propiedades de los nodos de un layout.
+
+## Ej11Factorial.java
+
+Ejemplo de uso de JavaFX con FXML y controlador para calcular el factorial de un número.
+
+## Ej12FXML.java
+
+Ejemplo de uso de FXML.
