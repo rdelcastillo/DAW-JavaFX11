@@ -1,0 +1,15 @@
+.label {
+	-fx-font-size: 18px;
+}
+
+.label-negrita {
+	-fx-font-weight: bold;
+}
+
+.text-field {
+	-fx-font: 18px "Arial";
+}
+
+#resultado {
+	-fx-font: 25px "Courier";
+}
