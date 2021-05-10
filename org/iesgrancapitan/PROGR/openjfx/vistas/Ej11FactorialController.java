@@ -35,7 +35,7 @@ public class Ej11FactorialController {
 
   @FXML
   void salirSiEsc(KeyEvent event) {
-    if (confirmaSalir()) {
+    if (event.getCode().getName().equals("Esc") && confirmaSalir()) {
       Scene scene = numero.getScene();
       Stage stage = (Stage) scene.getWindow();
       stage.close();
