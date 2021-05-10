@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="782.0" spacing="10.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesgrancapitan.PROGR.openjfx.ejercicios.vistas.Ej02AdivinaController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label fx:id="labelIntroduzca" text="Introduzca un numero entre 1 y 100">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+            <TextField id="numeroAAdivinar" fx:id="numeroIntroducido">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font></TextField>
+         </children>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <TextArea id="visor" fx:id="visor" editable="false" prefHeight="182.0" prefWidth="740.0">
+         <font>
+            <Font name="Arial" size="25.0" />
+         </font></TextArea>
+      <HBox alignment="CENTER" prefHeight="94.0" prefWidth="647.0" spacing="10.0">
+         <children>
+            <Label text="Intentos">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="intentos" editable="false">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font></TextField>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#intentar" text="Intentar">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
