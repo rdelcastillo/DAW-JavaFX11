@@ -26,12 +26,17 @@ public class ImageViewExperiments extends Application  {
     // The constructor of the ImageView class needs an instance of a javafx.scene.image.Image as parameter. 
     // The Image object represents the image to be displayed by the ImageView control.
     
-    Image image = new Image(getClass().getResource("view/JavafxClasses.jpg").toString());
-    ImageView imageView = new ImageView(image);
+    Image image1 = new Image(getClass().getResource("view/JavafxClasses.jpg").toString());
+    ImageView imageView1 = new ImageView(image1);
+    
+    Image image2 = new Image("https://www.blogs.iesgrancapitan.org/wp-content/uploads/sites/18/2019/05/IES_Gran_Capitan-_Logo.jpg");
+    ImageView imageView2 = new ImageView(image2);
+    imageView2.setPreserveRatio(true);
+    imageView2.setFitHeight(image1.getHeight());
 
-    HBox hbox = new HBox(imageView);
+    HBox hbox = new HBox(imageView1, imageView2);
 
-    Scene scene = new Scene(hbox, 1000, 600);
+    Scene scene = new Scene(hbox);
     primaryStage.setScene(scene);
     primaryStage.show();
 
