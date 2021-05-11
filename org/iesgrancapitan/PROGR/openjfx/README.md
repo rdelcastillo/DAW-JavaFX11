@@ -47,3 +47,11 @@ Ejemplo de uso de JavaFX con FXML y controlador para calcular el factorial de un
 ## Ej12FXML.java
 
 Ejemplo de uso de FXML.
+
+## Ej13FactorialConCSS.java
+
+Nueva implementación de *Ej11Factorial.java* usando una hoja de estilos llamada desde el objeto Scene.
+
+## Ej14FactorialConCSS.java
+
+Nueva implementación de *Ej11Factorial.java* usando una hoja de estilos llamada desde el fichero FXML y controlando que no se puedan meter dígitos en el campo de texto del número.
