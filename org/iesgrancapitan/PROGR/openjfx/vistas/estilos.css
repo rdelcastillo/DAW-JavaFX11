@@ -1,0 +1,13 @@
+#fuente-courier {
+	-fx-font: 50px "Courier";
+}
+
+.label, .text-field, .button {
+	-fx-font: 24px "Arial";
+}
+
+.root {
+	-fx-padding: 20;
+	-fx-spacing: 10;
+	-fx-alignment: CENTER;
+}
