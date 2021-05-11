@@ -6,4 +6,12 @@
 
 1. Aplicación que calcule el perí­metro y área de un rectángulo dada su base y su altura.
 
+1. *Aplicación que cuente cuantas palabras tiene una frase.*
+
+1. *Aplicación que simule un cajero de cambio: devuelve y desglosa el cambio en billetes y monedas de forma "ideal"; es decir, con el menor número de billetes y monedas posibles.*
+
+1. *Aplicación que guarda en un fichero el contenido de otros dos ficheros, de tal forma que en el fichero resultante aparezcan las líneas de los primeros dos ficheros mezcladas, es decir, la primera línea será del primer fichero, la segunda será del segundo fichero, la tercera será la siguiente del primer fichero, etc.*
+
+1. *Aplicación que quita los comentarios de un programa de Java.*
+
 Nota.- Los enunciados en cursiva significan que las soluciones no están subidas.
