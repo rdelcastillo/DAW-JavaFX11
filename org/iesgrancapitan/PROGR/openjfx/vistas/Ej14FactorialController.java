@@ -23,17 +23,13 @@ public class Ej14FactorialController {
   // Event Listener on Button.onAction
   @FXML
   public void calcular(ActionEvent event) {
-    try {
-      long n = Long.parseLong(numero.getText());
-      long f = 1;
-      for (int i = 2; i <= n; i++) {
-        f *= i;
-      }
-      visor.setText(f + "");
 
-    } catch (NumberFormatException e) {
-      visor.setText("'" + numero.getText() + "' no es un número.");
+    long n = Long.parseLong(numero.getText());
+    long f = 1;
+    for (int i = 2; i <= n; i++) {
+      f *= i;
     }
+    visor.setText(f + "");
   }
 
   @FXML
@@ -58,13 +54,14 @@ public class Ej14FactorialController {
   public void initialize() {
     // Impedimos dar a calcular si no hay valor en "número"
     botonCalcular.setDisable(true);
-    
+
     numero.textProperty().addListener((observable, oldValue, newValue) -> {
       // Impedimos que se puedan meter caracteres que no sean dígitos
       if (!newValue.matches("^[0-9]*$")) {
+        System.out.println("Número inválido: " + numero.getText());
         numero.setText(oldValue);
       }
-      // Activamos botón si hay contenido en "número"
+      // Desactivamos botón si no hay contenido en "número"
       botonCalcular.setDisable(numero.getText().isBlank());
     });
   }
