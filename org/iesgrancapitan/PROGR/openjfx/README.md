@@ -55,3 +55,11 @@ Nueva implementación de *Ej11Factorial.java* usando una hoja de estilos llamada
 ## Ej14FactorialConCSS.java
 
 Nueva implementación de *Ej11Factorial.java* usando una hoja de estilos llamada desde el fichero FXML y controlando que no se puedan meter dígitos en el campo de texto del número.
+
+## Ej15BindindigYEventosConProperty.java
+
+Ejemplo de binding y uso de eventos basados en propiedades.
+
+## Ej16ConversionDinero.java
+
+A veces tenemos que acceder a datos de la aplicación principal desde un controlador. Este ejemplo ilustra como hacerlo, básicamente hay que inyectar a cada controlador el dato, o los datos, que necesita.
