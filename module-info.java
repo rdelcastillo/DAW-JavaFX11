@@ -15,6 +15,7 @@ module hellofx {
   exports org.iesgrancapitan.PROGR.openjfx.controles.tableview;
   exports org.iesgrancapitan.PROGR.openjfx.controles.view;
   exports org.iesgrancapitan.PROGR.openjfx.dialogos;
+  exports org.iesgrancapitan.PROGR.openjfx.eventos;
   exports org.iesgrancapitan.PROGR.openjfx.ejercicios;
   exports org.iesgrancapitan.PROGR.openjfx.ejercicios.vistas;
 }
