@@ -63,3 +63,7 @@ Ejemplo de binding y uso de eventos basados en propiedades.
 ## Ej16ConversionDinero.java
 
 A veces tenemos que acceder a datos de la aplicación principal desde un controlador. Este ejemplo ilustra como hacerlo, básicamente hay que inyectar a cada controlador el dato, o los datos, que necesita.
+
+## Ej17ControlSpinner.JAVA
+
+Ejemplo de control del valor de un spinner editable de enteros. Impedimos cambiar el valor del spinner desde el editor si ponemos uno que no sea numérico. 
