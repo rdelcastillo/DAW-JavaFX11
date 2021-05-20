@@ -6,8 +6,6 @@ package org.iesgrancapitan.PROGR.openjfx;
  * Impedimos cambiar el valor del spinner desde el editor si ponemos uno que no sea numérico. 
  */
 
-import java.util.regex.Pattern;
-
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -87,7 +85,13 @@ public class Ej17ControlSpinner extends Application {
   }
   
   private static boolean esNumerico(String cadena) {
-    return Pattern.matches("^[1-9][0-9]*$", cadena);
+    boolean esNumerico = true;
+    try {
+      Integer.parseInt(cadena);
+    } catch (NumberFormatException e) {
+      esNumerico = false;
+    }
+    return esNumerico;
   }
 
   public static void main(String[] args) {
