@@ -114,7 +114,7 @@ public class Eventos01MouseEvent extends Application {
       visor.clear();
     });
     
-    //label.addEventHandler(MouseEvent.MOUSE_CLICKED, handler1);
+    label.addEventHandler(MouseEvent.MOUSE_CLICKED, handlerPropagacion);
     label.addEventFilter(MouseEvent.MOUSE_CLICKED, handlerCaptura);
     
     textField.addEventHandler(MouseEvent.MOUSE_CLICKED, handlerPropagacion);

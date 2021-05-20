@@ -45,7 +45,7 @@ public class Eventos04CirculoEscurridizo extends Application {
       distanciaAnterior = distanciaActual;
     });
 
-    // Cuando el ratón pulsado está cerca del círculo desplazamos 25px a la izquierda y arriba
+    // Cuando el ratón está pulsado dejamos que se acerque al círculo
     scene.setOnMouseDragged(e -> {
       message.setText("La distancia al centro del círculo es " + distancia(e, circle) + "px");
     });
