@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="600.0" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesgrancapitan.PROGR.openjfx.examenes.vistas.CajaController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="500.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label style="-fx-font-weight: BOLD;" text="Apuntes de Caja" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+      <Label text="€uros a apuntar" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+      <Label text="Concepto" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+      <TextField fx:id="importe" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <tooltip>
+            <Tooltip text="Importe a anotar en la Caja. Si pulsas ENTER es un Ingreso." wrapText="true" />
+         </tooltip></TextField>
+      <TextField fx:id="concepto" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <tooltip>
+            <Tooltip text="Introduzca informacion sobre el importe a registrar" />
+         </tooltip></TextField>
+      <Label text="Visor de apuntes" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+      <TextArea fx:id="visor" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+      <Button defaultButton="true" mnemonicParsing="false" onAction="#ingresar" text="Ingresar" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#sacar" text="Sacar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#guardar" text="Guardar" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="BOTTOM" />
+      <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+      <Label text="Saldo de la Caja" GridPane.rowIndex="7" />
+      <TextField fx:id="saldo" editable="false" text="0.00 €" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+   </children>
+</GridPane>
