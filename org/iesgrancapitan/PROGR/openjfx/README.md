@@ -67,3 +67,11 @@ A veces tenemos que acceder a datos de la aplicación principal desde un control
 ## Ej17ControlSpinner.JAVA
 
 Ejemplo de control del valor de un spinner editable de enteros. Impedimos cambiar el valor del spinner desde el editor si ponemos uno que no sea numérico. 
+
+## Ej18ConversionDinero.java
+
+Este ejemplo se basa en el *Ej16ConversionDinero* pero usa un Stage inicial para pedir los valores de cambio de monedas.
+
+## Ej19ConversionDinero.java
+
+Este ejemplo se diferencia del anterior en que el Stage que pide los valores de cambio se mantiene abierto y al aplicar se inyectan los datos en el controlador del Stage principal.
