@@ -3,7 +3,6 @@ package org.iesgrancapitan.PROGR.openjfx.vistas;
 import javafx.fxml.FXML;
 
 import javafx.scene.control.TextField;
-
 import javafx.event.ActionEvent;
 
 public class Ej16ConversionDineroController {
@@ -38,4 +37,5 @@ public class Ej16ConversionDineroController {
   public void setCambioLibra(double cambio) {
     cambioLibra = cambio;
   }
+
 }
