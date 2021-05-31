@@ -1,7 +1,7 @@
 /**
- * The JavaFX TableView enables you to display table views inside your JavaFX applications. 
+ * The JavaFX TableView enables you to display table views inside your JavaFX applications.
  * 
- * The JavaFX TableView is represented by the class javafx.scene.control.TableView 
+ * The JavaFX TableView is represented by the class javafx.scene.control.TableView
  * 
  * See more at http://tutorials.jenkov.com/javafx/tableview.html
  */
@@ -11,7 +11,6 @@ package org.iesgrancapitan.PROGR.openjfx.controles.tableview;
 import javafx.application.Application;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -28,10 +27,14 @@ import javafx.stage.Stage;
 
 public class TableViewExample extends Application {
 
+  private static final String STYLE_SHEET =
+      "/org/iesgrancapitan/PROGR/openjfx/controles/view/styles.css";
+
   public static void main(String[] args) {
     launch(args);
   }
 
+  @SuppressWarnings("unchecked")
   @Override
   public void start(Stage primaryStage) {
 
@@ -39,12 +42,12 @@ public class TableViewExample extends Application {
     TableView<Contact> tableView = new TableView<Contact>();
 
     /*
-     * Having created a TableView you need to add one or more TableColumn instances to the 
-     * TableView instance. 
+     * Having created a TableView you need to add one or more TableColumn instances to the TableView
+     * instance.
      * 
-     * A TableColumn represents a vertical column of values. 
+     * A TableColumn represents a vertical column of values.
      * 
-     * Each value is displayed on its own row, and is typically extracted from the list of objects 
+     * Each value is displayed on its own row, and is typically extracted from the list of objects
      * being displayed in the TableView.
      */
 
@@ -54,12 +57,13 @@ public class TableViewExample extends Application {
     TableColumn<Contact, String> column4 = new TableColumn<>("Phone");
 
     /*
-     * A TableColumn must have a cell value factory set on it. 
+     * A TableColumn must have a cell value factory set on it.
      * 
-     * The cell value factory extracts the value to be displayed in each cell (on each row) in the 
-     * column. 
+     * The cell value factory extracts the value to be displayed in each cell (on each row) in the
+     * column.
      * 
-     * The PropertyValueFactory factory can extract a property value (field value) from a Java object. 
+     * The PropertyValueFactory factory can extract a property value (field value) from a Java
+     * object.
      * 
      * The name of the property is passed as a parameter to the PropertyValueFactory constructor.
      */
@@ -70,23 +74,20 @@ public class TableViewExample extends Application {
     column4.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
 
     // Add columns
-    tableView.getColumns().add(column1);
-    tableView.getColumns().add(column2);
-    tableView.getColumns().add(column3);
-    tableView.getColumns().add(column4);
+    tableView.getColumns().addAll(column1, column2, column3, column4);
 
     /*
-     * You can set a placeholder to be displayed when the JavaFX TableView has no rows to display. 
+     * You can set a placeholder to be displayed when the JavaFX TableView has no rows to display.
      * 
-     * The placeholder must be an instance of the JavaFX Node class, which most (if not all) JavaFX 
-     * controls are. 
+     * The placeholder must be an instance of the JavaFX Node class, which most (if not all) JavaFX
+     * controls are.
      */
 
     tableView.setPlaceholder(new Label("No rows to display"));
 
     /*
-     * Once you have added TableColumn instances to the JavaFX TableView, you can add the data 
-     * to be displayed to the TableView. 
+     * Once you have added TableColumn instances to the JavaFX TableView, you can add the data to be
+     * displayed to the TableView.
      */
 
     tableView.getItems().add(new Contact("John", "Doe", "666111222"));
@@ -97,7 +98,7 @@ public class TableViewExample extends Application {
 
     TextArea textArea = new TextArea();
 
-    // To obtain a list of the row items of a JavaFX TableView, you call getItems() method. 
+    // To obtain a list of the row items of a JavaFX TableView, you call getItems() method.
 
     Button buttonPrint = new Button("Print Table");
     buttonPrint.setOnAction(e -> {
@@ -108,7 +109,7 @@ public class TableViewExample extends Application {
     });
 
     /*
-     * The JavaFX TableView component has an internal SelectionModel which is used to either read 
+     * The JavaFX TableView component has an internal SelectionModel which is used to either read
      * what rows and / or cells the user has selected, or to select rows and cells programmatically
      */
 
@@ -131,8 +132,8 @@ public class TableViewExample extends Application {
     });
 
     /*
-     *  To obtain a list of the selected row items of a JavaFX TableView, you call the 
-     *  SelectionModel getSelectedItems() method. 
+     * To obtain a list of the selected row items of a JavaFX TableView, you call the SelectionModel
+     * getSelectedItems() method.
      */
 
     Button buttonItems = new Button("Selected Items");
@@ -145,11 +146,11 @@ public class TableViewExample extends Application {
     });
 
     /*
-     * You can also just obtain a list of the indices of the selected rows, 
-     * instead of the selected items themselves. 
+     * You can also just obtain a list of the indices of the selected rows, instead of the selected
+     * items themselves.
      */
 
-    Button buttonIndices = new Button("Selected Indices");
+    Button buttonIndices = new Button("Selected Indexes");
     buttonIndices.setOnAction(e -> {
       ObservableList<Integer> selectedIndices = selectionModel.getSelectedIndices();
       textArea.appendText("Indices: " + selectedIndices.toString() + "\n");
@@ -157,8 +158,8 @@ public class TableViewExample extends Application {
     });
 
     /*
-     *  You can clear all selected rows and cells using the TableViewSelectionModel clearSelection() 
-     *  method.
+     * You can clear all selected rows and cells using the TableViewSelectionModel clearSelection()
+     * method.
      */
 
     Button buttonClear = new Button("Clear");
@@ -167,31 +168,27 @@ public class TableViewExample extends Application {
       textArea.clear();
     });
 
-
-
     // It is possible to listen for selection changes in the TableViewSelectionModel
 
     ObservableList<Contact> selectedItems = selectionModel.getSelectedItems();
 
-    selectedItems.addListener(new ListChangeListener<Contact>() {
-      @Override
-      public void onChanged(Change<? extends Contact> change) {
-        System.out.println("Selection changed: " + change.getList());
-      }
-    });
+    selectedItems.addListener((ListChangeListener<Contact>) change -> System.out
+        .println("Selection changed: " + change.getList()));
+
 
     // Layout, scene and stage
     HBox hBox = new HBox(10, buttonPrint, buttonItems, buttonIndices, buttonSelection, buttonClear);
     hBox.setAlignment(Pos.CENTER);
 
-    VBox root = new VBox(10, tableView, hBox, textArea);
-    root.setPadding(new Insets(10));
+    VBox root = new VBox(tableView, hBox, textArea);
 
     Scene scene = new Scene(root);
+    scene.getStylesheets().add(getClass().getResource(STYLE_SHEET).toExternalForm());
+
     primaryStage.setScene(scene);
     primaryStage.setTitle("TableView Example");
     primaryStage.show();
-    
+
   }
 
 }

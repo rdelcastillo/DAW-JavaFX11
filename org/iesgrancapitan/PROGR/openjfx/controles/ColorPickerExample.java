@@ -12,7 +12,6 @@
 package org.iesgrancapitan.PROGR.openjfx.controles;
 
 import javafx.application.Application;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
@@ -50,9 +49,9 @@ public class ColorPickerExample extends Application {
 
     
     HBox hBox = new HBox(colorPicker, text, button);
-    hBox.setPadding(new Insets(10,10,10,10));
-    hBox.setSpacing(20);
-    Scene scene = new Scene(hBox, 450, 50);
+    Scene scene = new Scene(hBox, 600, 100);
+    scene.getStylesheets().add(getClass()
+        .getResource("view/styles.css").toExternalForm());
 
     primaryStage.setScene(scene);
     primaryStage.show();

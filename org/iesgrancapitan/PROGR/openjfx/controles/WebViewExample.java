@@ -26,6 +26,9 @@ import javafx.stage.Stage;
 
 public class WebViewExample extends Application {
 
+  private static final String INTRO = "\r";
+  private static final double ZOOM = 0.10;
+
   public static void main(String[] args) {
     launch(args);
   }
@@ -34,16 +37,14 @@ public class WebViewExample extends Application {
 
     // creamos y configuramos un WebView
     WebView webView = new WebView();
-    webView.setMaxSize(750, 700);
 
     // campo para introducir la URL
     TextField entry = new TextField();
-    entry.setMaxWidth(750);
 
     // si pulsamos Intro abrimos la URL
     entry.setOnKeyTyped(e -> {
       String url;
-      if(e.getCharacter().equals("\r"))
+      if(e.getCharacter().equals(INTRO))
       {
         url = entry.getText();
         if(!url.startsWith("http"))
@@ -55,11 +56,8 @@ public class WebViewExample extends Application {
       }
     });
 
-    VBox root = new VBox(20);
-    root.setAlignment(Pos.CENTER);
-    root.setMaxSize(1024,768);
-    root.getChildren().addAll(new Label("Introduce una URL y pulsa Intro..."), entry, webView);
-    
+    VBox root = new VBox(new Label("Introduce una URL y pulsa Intro..."), entry, webView);
+
     // Botones de navegación
     
     Button prev = new Button("⏪");
@@ -69,10 +67,10 @@ public class WebViewExample extends Application {
     });
     
     Button zoom1 = new Button("Zoom +");
-    zoom1.setOnAction(e -> webView.setZoom(webView.getZoom() + 0.10));
+    zoom1.setOnAction(e -> webView.setZoom(webView.getZoom() + ZOOM));
     
     Button zoom2 = new Button("Zoom -");
-    zoom2.setOnAction(e -> webView.setZoom(webView.getZoom() - 0.10));
+    zoom2.setOnAction(e -> webView.setZoom(webView.getZoom() - ZOOM));
     
     Button next = new Button("⏩");
     next.setOnAction(e -> {
@@ -86,10 +84,12 @@ public class WebViewExample extends Application {
     
     // Escena y escenario
     
-    Scene scene = new Scene(root, 800, 750);
+    Scene scene = new Scene(root);
+    scene.getStylesheets().add(getClass().getResource("view/styles.css").toExternalForm());
 
     stage.setScene(scene);
     stage.setTitle("Mi navegador");
+    stage.setResizable(false);
     stage.show();
   }
 }

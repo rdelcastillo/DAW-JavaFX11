@@ -49,9 +49,10 @@ public class CheckBoxExperiments extends Application  {
 
     HBox hBox = new HBox(checkBox, button);
     hBox.setPadding(new Insets(10,10,10,10));
-    hBox.setSpacing(25);
 
-    Scene scene = new Scene(hBox, 175, 50);
+    Scene scene = new Scene(hBox, 350, 50);
+    scene.getStylesheets().add(getClass()
+        .getResource("view/styles.css").toExternalForm());
     primaryStage.setScene(scene);
     primaryStage.show();
 

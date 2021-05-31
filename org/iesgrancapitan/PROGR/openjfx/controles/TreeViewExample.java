@@ -51,6 +51,7 @@ public class TreeViewExample extends Application {
     // Layout, scene and stage
     VBox root = new VBox(treeView);
     Scene scene = new Scene(root);
+    scene.getStylesheets().add(getClass().getResource("view/styles.css").toExternalForm());
     primaryStage.setScene(scene);
     primaryStage.setTitle("TreeView Experiments");
     primaryStage.show();

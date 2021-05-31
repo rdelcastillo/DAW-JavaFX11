@@ -50,8 +50,9 @@ public class RadioButtonExperiments extends Application  {
 
     HBox hbox = new HBox(radioButton1, radioButton2, radioButton3, radioButton4);
 
-    Scene scene = new Scene(hbox, 225, 25);
+    Scene scene = new Scene(hbox);
     primaryStage.setScene(scene);
+    scene.getStylesheets().add(getClass().getResource("view/styles.css").toExternalForm());
     primaryStage.show();
 
   }

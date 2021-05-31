@@ -48,7 +48,9 @@ public class MenuButtonExperiments extends Application  {
 
     // Añadimos a la escena y escenario
     HBox hbox = new HBox(menuButton);
-    Scene scene = new Scene(hbox, 200, 160);
+    Scene scene = new Scene(hbox);
+    scene.getStylesheets().add(getClass()
+        .getResource("view/styles.css").toExternalForm());
     primaryStage.setScene(scene);
     primaryStage.show();
   }

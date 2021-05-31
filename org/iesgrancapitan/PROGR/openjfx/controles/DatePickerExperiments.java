@@ -46,7 +46,9 @@ public class DatePickerExperiments extends Application  {
 
     HBox hbox = new HBox(datePicker, button);
 
-    Scene scene = new Scene(hbox, 300, 30);
+    Scene scene = new Scene(hbox, 600, 75);
+    scene.getStylesheets().add(getClass()
+        .getResource("view/styles.css").toExternalForm());
     primaryStage.setScene(scene);
     primaryStage.show();
 

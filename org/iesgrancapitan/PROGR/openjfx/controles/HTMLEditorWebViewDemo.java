@@ -10,7 +10,6 @@
 package org.iesgrancapitan.PROGR.openjfx.controles;
 
 import javafx.application.Application;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
@@ -26,8 +25,6 @@ public class HTMLEditorWebViewDemo extends Application {
 
     // HTML Editor.
     HTMLEditor htmlEditor = new HTMLEditor();
-    htmlEditor.setPrefHeight(245);
-    htmlEditor.setMinHeight(220);
     htmlEditor.setStyle(        // You can apply Css style for HTMLEditor:
         "-fx-font: 15 Arial;"
         + "-fx-border-color: brown; "
@@ -52,13 +49,12 @@ public class HTMLEditorWebViewDemo extends Application {
     showHTMLButton.setOnAction(e -> webEngine.loadContent(htmlEditor.getHtmlText(), "text/html"));
 
     VBox root = new VBox();
-    root.setPadding(new Insets(5));
-    root.setSpacing(5);
     root.getChildren().addAll(htmlEditor, showHTMLButton, webView);
-    Scene scene = new Scene(root, 600, 450);
+    
+    Scene scene = new Scene(root);
+    scene.getStylesheets().add(getClass().getResource("view/styles.css").toExternalForm());
 
     stage.setTitle("JavaFX HTMLEditor");
-
     stage.setScene(scene);
     stage.show();
   }

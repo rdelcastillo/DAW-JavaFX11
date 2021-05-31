@@ -10,7 +10,6 @@
 package org.iesgrancapitan.PROGR.openjfx.controles;
 
 import javafx.application.Application;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -43,10 +42,12 @@ public class ChoiceBoxExperiments extends Application  {
 
     
     HBox hbox = new HBox(choiceBox, button1);
-    hbox.setPadding(new Insets(10,10,10,10));
-    hbox.setSpacing(25);
+    //hbox.setPadding(new Insets(10,10,10,10));
+    //hbox.setSpacing(25);
 
-    Scene scene = new Scene(hbox, 200, 50);
+    Scene scene = new Scene(hbox, 350, 50);
+    scene.getStylesheets().add(getClass()
+        .getResource("view/styles.css").toExternalForm());
     primaryStage.setScene(scene);
     primaryStage.show();
 

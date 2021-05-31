@@ -1,8 +1,6 @@
 package org.iesgrancapitan.PROGR.openjfx.controles;
 
 import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Slider;
 import javafx.scene.layout.VBox;
@@ -60,12 +58,10 @@ public class SliderExample extends Application {
     
     slider.setMinorTickCount(5);
     
-    
     VBox vBox = new VBox(slider, text);
-    vBox.setAlignment(Pos.CENTER);
-    vBox.setPadding(new Insets(10,10,10,10));
-    vBox.setSpacing(20);
-    Scene scene = new Scene(vBox, 500, 100);
+    
+    Scene scene = new Scene(vBox, 800, 100);
+    scene.getStylesheets().add(getClass().getResource("view/styles.css").toExternalForm());
 
     primaryStage.setScene(scene);
     primaryStage.show();

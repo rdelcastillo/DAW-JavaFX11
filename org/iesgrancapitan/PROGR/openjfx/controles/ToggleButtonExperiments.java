@@ -45,7 +45,8 @@ public class ToggleButtonExperiments extends Application  {
 
     HBox hbox = new HBox(toggleButton1, toggleButton2, toggleButton3, toggleButton4);
 
-    Scene scene = new Scene(hbox, 200, 100);
+    Scene scene = new Scene(hbox);
+    scene.getStylesheets().add(getClass().getResource("view/styles.css").toExternalForm());
     primaryStage.setScene(scene);
     primaryStage.show();
 

@@ -34,6 +34,8 @@ public class HyperlinkExample extends Application {
 
     VBox vBox = new VBox(link);
     Scene scene = new Scene(vBox, 960, 600);
+    scene.getStylesheets().add(getClass()
+        .getResource("view/styles.css").toExternalForm());
 
     primaryStage.setScene(scene);
     primaryStage.show();

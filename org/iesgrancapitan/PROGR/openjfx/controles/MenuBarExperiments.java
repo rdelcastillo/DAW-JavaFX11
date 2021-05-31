@@ -209,8 +209,11 @@ public class MenuBarExperiments extends Application {
     // Layout, scene and stage
 
     VBox vBox = new VBox(menuBar);
+    vBox.setStyle("-fx-alignment: TOP; -fx-padding: 0");
 
-    Scene scene = new Scene(vBox, 960, 600);
+    Scene scene = new Scene(vBox, 800, 600);
+    scene.getStylesheets().add(getClass()
+        .getResource("view/styles.css").toExternalForm());
 
     primaryStage.setScene(scene);
     primaryStage.show();

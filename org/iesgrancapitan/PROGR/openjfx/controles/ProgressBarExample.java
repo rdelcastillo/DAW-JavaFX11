@@ -12,13 +12,12 @@
 package org.iesgrancapitan.PROGR.openjfx.controles;
 
 import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.ToolBar;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -32,6 +31,7 @@ public class ProgressBarExample extends Application {
     primaryStage.setTitle("ProgressBar Experiments");
     
     Text score = new Text("50");
+    score.setFont(new Font("Arial", 50));
 
     // In order to use a JavaFX ProgressBar you must first create an instance of the ProgressBar class
     ProgressBar progressBar = new ProgressBar(0.5);
@@ -64,10 +64,10 @@ public class ProgressBarExample extends Application {
 
     // Layout, scene and stage
     VBox root = new VBox(score, progressBar, new ToolBar(buttonPrev, buttonReset, buttonNext));
-    root.setPadding(new Insets(10));
-    root.setAlignment(Pos.CENTER);
 
     Scene scene = new Scene(root);
+    scene.getStylesheets().add(getClass()
+        .getResource("view/styles.css").toExternalForm());
 
     primaryStage.setScene(scene);
     primaryStage.show();

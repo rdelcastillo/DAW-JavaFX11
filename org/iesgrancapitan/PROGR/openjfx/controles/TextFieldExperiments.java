@@ -44,7 +44,8 @@ public class TextFieldExperiments extends Application  {
     HBox hBox = new HBox(textField, button);
     hBox.setAlignment(Pos.CENTER);
 
-    Scene scene = new Scene(hBox, 300, 50);
+    Scene scene = new Scene(hBox);
+    scene.getStylesheets().add(getClass().getResource("view/styles.css").toExternalForm());
     primaryStage.setScene(scene);
     primaryStage.show();
 

@@ -31,6 +31,11 @@ import javafx.stage.Stage;
 
 public class Concurrency extends Application {
   
+  private static final int PADDING = 10;
+  private static final int SPACING = 5;
+  private static final int FONT_SIZE = 50;
+  private static final String FONT_NAME = "Arial";
+  
   private boolean keepRunning = true;
   
   public static void main(String[] args) {
@@ -42,7 +47,7 @@ public class Concurrency extends Application {
     
     // clock controls
 
-    Font font = new Font("Arial", 50);
+    Font font = new Font(FONT_NAME, FONT_SIZE);
     
     Label sep1 = new Label(":");
     sep1.setFont(font);
@@ -97,13 +102,11 @@ public class Concurrency extends Application {
         }
       }
     });
-
-    taskThread.start();
     
     // Layout, scene and stage
     
-    HBox root = new HBox(5, hour, sep1, minute, sep2, second);
-    root.setPadding(new Insets(10));
+    HBox root = new HBox(SPACING, hour, sep1, minute, sep2, second);
+    root.setPadding(new Insets(PADDING));
     
     Scene scene = new Scene(root);
 
@@ -111,5 +114,7 @@ public class Concurrency extends Application {
     primaryStage.setTitle("Concurrency: clock");
     primaryStage.setOnCloseRequest(e -> keepRunning = false);   // to stop the thread
     primaryStage.show();
+    
+    taskThread.start();
   }
 }

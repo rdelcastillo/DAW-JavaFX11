@@ -111,7 +111,8 @@ public class SpinnerExperiments extends Application {
 
     // Scene and stage
 
-    Scene scene = new Scene(root, 380, 420);
+    Scene scene = new Scene(root);
+    scene.getStylesheets().add(getClass().getResource("view/styles.css").toExternalForm());
 
     stage.setTitle("Spinner Experiments 1");
     stage.setScene(scene);

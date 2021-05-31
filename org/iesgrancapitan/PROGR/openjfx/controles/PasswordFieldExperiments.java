@@ -42,7 +42,9 @@ public class PasswordFieldExperiments extends Application  {
 
     HBox hBox = new HBox(passwordField, button);
 
-    Scene scene = new Scene(hBox, 330, 100);
+    Scene scene = new Scene(hBox);
+    scene.getStylesheets().add(getClass()
+        .getResource("view/styles.css").toExternalForm());
     primaryStage.setScene(scene);
     primaryStage.show();
 

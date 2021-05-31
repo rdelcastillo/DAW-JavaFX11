@@ -10,7 +10,6 @@
 package org.iesgrancapitan.PROGR.openjfx.controles;
 
 import javafx.application.Application;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -25,7 +24,6 @@ public class HTMLEditorDemo extends Application {
 
     // Create HTMLEditor
     HTMLEditor htmlEditor = new HTMLEditor();
-    htmlEditor.setPrefHeight(245);
 
     String INITIAL_TEXT = "<h2>Apollo 11</h2>" 
         + "Apollo 11 was the spaceflight that landed the first humans,"
@@ -44,13 +42,12 @@ public class HTMLEditorDemo extends Application {
     showHTMLButton.setOnAction(e -> textArea.setText(htmlEditor.getHtmlText())); // Get HTML
 
     VBox root = new VBox();
-    root.setPadding(new Insets(5));
-    root.setSpacing(5);
     root.getChildren().addAll(htmlEditor, showHTMLButton, textArea);
-    Scene scene = new Scene(root, 600, 450);
+    
+    Scene scene = new Scene(root);
+    scene.getStylesheets().add(getClass().getResource("view/styles.css").toExternalForm());
 
     stage.setTitle("JavaFX HTMLEditor");
-
     stage.setScene(scene);
     stage.show();
   }

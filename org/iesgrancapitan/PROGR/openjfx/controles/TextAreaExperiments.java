@@ -29,7 +29,6 @@ public class TextAreaExperiments extends Application  {
     // You can set the text of a TextArea control via its setText() method. 
 
     Button button = new Button("Click to get text");
-    button.setMinWidth(50);
     button.setOnAction(action -> {
       System.out.println(textArea.getText());
       textArea.setText("Clicked!");
@@ -38,7 +37,8 @@ public class TextAreaExperiments extends Application  {
 
     VBox vbox = new VBox(textArea, button);
 
-    Scene scene = new Scene(vbox, 200, 100);
+    Scene scene = new Scene(vbox);
+    scene.getStylesheets().add(getClass().getResource("view/styles.css").toExternalForm());
     primaryStage.setScene(scene);
     primaryStage.show();
   }

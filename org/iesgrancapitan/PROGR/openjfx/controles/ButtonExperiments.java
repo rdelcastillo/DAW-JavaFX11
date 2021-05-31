@@ -64,7 +64,9 @@ public class ButtonExperiments extends Application  {
 
     HBox hbox = new HBox(button1, button2, button3, button4);
 
-    Scene scene = new Scene(hbox, 500, 100);
+    Scene scene = new Scene(hbox, 900, 150);
+    scene.getStylesheets().add(getClass()
+        .getResource("view/styles.css").toExternalForm());
     primaryStage.setScene(scene);
     primaryStage.show();
 

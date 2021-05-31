@@ -34,7 +34,7 @@ public class ContextMenuExample extends Application {
     MenuItem menuItem2 = new MenuItem("Increase font size");
     MenuItem menuItem3 = new MenuItem("UPPERCASE");
 
-    contextMenu.getItems().addAll(menuItem1,menuItem2,menuItem3);
+    contextMenu.getItems().addAll(menuItem1, menuItem2, menuItem3);
     
     // To detect which menu item was clicked, you add listeners to the MenuItem instances.
     
@@ -70,6 +70,7 @@ public class ContextMenuExample extends Application {
 
     VBox vBox = new VBox(textArea);
     Scene scene = new Scene(vBox);
+    //scene.getStylesheets().add(getClass().getResource("view/styles.css").toExternalForm());
 
     primaryStage.setScene(scene);
     primaryStage.setTitle("ContextMenu Experiments 1");

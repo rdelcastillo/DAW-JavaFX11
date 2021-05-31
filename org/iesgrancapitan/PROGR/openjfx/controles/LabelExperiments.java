@@ -23,7 +23,9 @@ public class LabelExperiments extends Application  {
     // You create a label control instance by creating an instance of the Label class    
     Label label = new Label("My Label");
 
-    Scene scene = new Scene(label, 200, 100);
+    Scene scene = new Scene(label);
+    scene.getStylesheets().add(getClass()
+        .getResource("view/styles.css").toExternalForm());
     primaryStage.setScene(scene);
     primaryStage.show();
   }

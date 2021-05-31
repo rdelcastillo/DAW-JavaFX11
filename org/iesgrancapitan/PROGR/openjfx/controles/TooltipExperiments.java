@@ -51,7 +51,9 @@ public class TooltipExperiments extends Application  {
     
     HBox hbox = new HBox(button1, button2);
 
-    Scene scene = new Scene(hbox, 500, 100);
+    Scene scene = new Scene(hbox);
+    scene.getStylesheets().add(getClass().getResource("view/styles.css").toExternalForm());
+    
     primaryStage.setScene(scene);
     primaryStage.show();
 
