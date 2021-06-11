@@ -75,3 +75,7 @@ Este ejemplo se basa en el *Ej16ConversionDinero* pero usa un Stage inicial para
 ## Ej19ConversionDinero.java
 
 Este ejemplo se diferencia del anterior en que el Stage que pide los valores de cambio se mantiene abierto y al aplicar se inyectan los datos en el controlador del Stage principal.
+
+## Ej20ClienteChat.java
+
+Implementación de un cliente de chat para el servidor [ChatServer](https://github.com/rdelcastillo/DAW-Java/blob/master/org/iesgrancapitan/PROGR/ejemplos/sockets/ChatServer.java) que usa un hilo para leer las notificaciones del servidor y reflejarlas en visor que usa un contenedor TextFlow. 
